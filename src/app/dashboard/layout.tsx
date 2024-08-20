@@ -1,7 +1,9 @@
-import Image from "next/image";import React from "react";
+import Image from "next/image";
+import React from "react";
 import { Sidebar } from "@/app/components/sidebar";
 import { UserNav } from "@/app/components/user-nav";
 import { Input } from "@/components/ui/input";
+import { Toaster } from "@/components/ui/toaster";
 
 interface MailPageProps {
   children?: React.ReactNode;
@@ -28,6 +30,7 @@ export default function MailPage({ children }: MailPageProps) {
         </div>
         {children}
       </div>
+      <Toaster />
     </div>
   );
 }
