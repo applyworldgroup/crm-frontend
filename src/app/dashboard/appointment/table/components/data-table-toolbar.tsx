@@ -1,5 +1,4 @@
-"use client";
-import { Table } from "@tanstack/react-table";
+"use client";import { Table } from "@tanstack/react-table";
 
 import { Input } from "@/components/ui/input";
 
@@ -14,12 +13,14 @@ export function DataTableToolbar<TData>({
     <div className="flex items-center justify-between">
       <div className="flex flex-1 items-center space-x-2">
         <Input
-          placeholder="Find Appointment by name"
-          value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("title")?.setFilterValue(event.target.value)
+          placeholder="Find Appointment by last name"
+          value={
+            (table.getColumn("lastName")?.getFilterValue() as string) ?? ""
           }
-          className="h-12 w-[150px] lg:w-[250px]"
+          onChange={(event) =>
+            table.getColumn("lastName")?.setFilterValue(event.target.value)
+          }
+          className="h-10 w-[150px] lg:w-[250px]"
         />
       </div>
     </div>

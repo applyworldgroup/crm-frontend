@@ -1,5 +1,4 @@
-"use client";
-import * as React from "react";
+"use client";import * as React from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -7,8 +6,6 @@ import {
   VisibilityState,
   flexRender,
   getCoreRowModel,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
