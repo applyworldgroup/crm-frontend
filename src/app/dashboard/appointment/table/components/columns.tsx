@@ -1,6 +1,4 @@
 "use client";import { ColumnDef } from "@tanstack/react-table";
-import { Badge } from "@/components/ui/badge";
-import { labels, priorities, statuses } from "../data/data";
 import { Task } from "../data/schema";
 import { DataTableColumnHeader } from "./data-table-column-header";
 import { DataTableRowActions } from "./data-table-row-actions";
@@ -74,6 +72,8 @@ export const columns: ColumnDef<Task>[] = [
         </div>
       );
     },
+    enableSorting: false,
+    enableHiding: false,
   },
   {
     accessorKey: "appointmentDate",
@@ -89,6 +89,8 @@ export const columns: ColumnDef<Task>[] = [
         </div>
       );
     },
+    enableSorting: false,
+    enableHiding: false,
   },
   {
     accessorKey: "reasonOfVisit",
@@ -104,6 +106,8 @@ export const columns: ColumnDef<Task>[] = [
         </div>
       );
     },
+    enableSorting: false,
+    enableHiding: false,
   },
   {
     id: "actions",
